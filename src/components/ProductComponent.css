@@ -5,9 +5,10 @@
 }
 
 .card{
-    width: 200px;
+    width: 300px;
     margin-top: 80px;
     padding: 30px 20px;
+    height: 450px;
 }
 .image{
     width: 100%;

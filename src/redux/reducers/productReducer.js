@@ -1,7 +1,8 @@
 import { ActionType } from "../contants/action-type";
 
 const initialState = {
-    products:[]
+    products:[],
+    filterProducts: []
 }
 
 const addToCart= {
@@ -13,6 +14,8 @@ export const productReducer = (state=initialState, {type, payload}) =>{
     switch(type){
         case ActionType.SET_PRODUCT:
             return {...state, products:payload};
+        case ActionType.FILTER_PRODUCT:
+            return {...state, filterProducts:state.products.filter((product)=> product.category===payload)}
         default:
             return state;
     }
@@ -38,4 +41,13 @@ export const addToCartReducer = (state = addToCart, {type,payload} ) => {
                 return state;
     }
 }
+
+// export const filterProductReducer = (state = initialState.products, {type, payload})=>{
+//     switch(type){
+//         case ActionType.FILTER_PRODUCT:
+//             return state.filter((product)=> product.category===payload)
+//             default: 
+//                return state
+//     }
+// }
 

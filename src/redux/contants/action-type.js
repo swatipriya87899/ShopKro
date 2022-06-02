@@ -4,4 +4,5 @@ export const ActionType = {
     REMOVE_PRODUCT: "REMOVE_PRODUCT",
     ADD_TO_CART: "ADD_TO_CART",
     CART_SIZE:"CART_SIZE",
+    FILTER_PRODUCT:"FILTER_PRODUCT"
 }

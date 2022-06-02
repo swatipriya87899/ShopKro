@@ -7,7 +7,19 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 const ProductComponent = () => {
+  //All products
   const { products } = useSelector((state) => state.allProducts);
+
+  //Collection of filtered Product
+  const {filterProducts} = useSelector((state)=> state.allProducts);
+
+  let listed_products;
+  if(filterProducts.length ===0)
+  listed_products = products;
+  else
+  listed_products=filterProducts;
+
+  console.log(listed_products)
 
   const dispatch = useDispatch();
   //fetching all products API
@@ -23,7 +35,7 @@ const ProductComponent = () => {
   }, []);
   return (
     <div className="card_group">
-      {products.map((products) => {
+      {listed_products.map((products) => {
         return (
           <Link to={`./product/${products.id}`} style={{textDecoration:"none"}}>
           <Card sx={{ maxWidth: 275 }} className="card">

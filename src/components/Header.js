@@ -9,7 +9,6 @@ const Header = () => {
 
   //cart product count
   const cart = useSelector((state)=>state.cartProduct.items.length);
-  console.log(cart)
 
   return (
     <div>

@@ -1,3 +1,4 @@
+import { Category } from "@mui/icons-material";
 import { ActionType } from "../contants/action-type";
 
 export const setProducts = (products) =>{
@@ -24,5 +25,12 @@ export const addToCart = (product) => {
     return{
         type: ActionType.ADD_TO_CART,
         payload:product
+    }
+}
+
+export const filterProduct = (category) => {
+    return{
+        type: ActionType.FILTER_PRODUCT,
+        payload: category
     }
 }

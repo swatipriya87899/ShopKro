@@ -1,7 +1,9 @@
 /* Appbar  */
-.css-ahj2mt-MuiTypography-root{
-    background-color: white;
-    color: #000;
-    padding: 10px 50px;
+.appbar{
+    background-color: white !important;
+    color: #000 !important;
+    padding: 10px 50px !important;
+    /* display: flex !important;
+    justify-content: space-between !important; */
 }
 
